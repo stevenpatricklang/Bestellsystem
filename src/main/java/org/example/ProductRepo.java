@@ -19,7 +19,14 @@ public class ProductRepo {
 
     // Method: get one Product
     public Product getOneProduct(int index){
-       return productsStorage.get(index);
+
+
+       if (index >= productsStorage.size()){
+           throw new IllegalArgumentException ("Produkt nicht gefunden");
+       }
+
+        return productsStorage.get(index);
+
     }
 
 }
