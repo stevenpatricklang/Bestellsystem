@@ -6,6 +6,13 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+
+
+
+
+
+
 
         Product seife = new Product(1,"Doveseife");
         Product shampoo = new Product(2,"Wella");
@@ -38,8 +45,22 @@ public class Main {
 
         Product shampooMode213 = new Product(297,"Wella erqew");
         Product zahnpastaModel2 = new Product(5983,"Colgate 484");
+
+        System.out.println("Enter new Id: ");
+        int inputId = scanner.nextInt();
+        System.out.println("Enter Product name:  ");
+        String productname= scanner.nextLine();
+
+        Product scannerProduct= new Product(inputId,productname);
+
+
+        shopService.addOrder(inputId, List.of(scannerProduct));
+
+
         shopService.addOrder(1547, List.of(shampooMode213,zahnpastaModel2));
         System.out.println("All Orders => \n"+shopService.getOrderRepo().listAllOrders());
+
+        System.out.println(shoplager.getOneProduct(789));
 
 
     }
