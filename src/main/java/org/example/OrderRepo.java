@@ -1,8 +1,7 @@
 package org.example;
 
 
-
-
+import java.util.List;
 
 public class OrderRepo {
 
@@ -22,8 +21,8 @@ public class OrderRepo {
         public Order getOneOrder(int index){
             return OrderList.get(index);
         }
-        public Order addOrder(int ordernumber){
-            return OrderList.add(ordernumber);
+        public void addOrder(Order newOrder){
+             OrderList.add(newOrder);
         }
 
     }
