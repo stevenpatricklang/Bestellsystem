@@ -106,9 +106,13 @@ public class OrderRepoTest {
 
         Order order2 = new Order(16546, products2);
         orderRepo.addOrder(order2);
+
+
         // WHEN
+
         Order expected = orderRepo.getOneOrder(1);
 
+        //THEN
 
         assertEquals(order2,expected );
     }

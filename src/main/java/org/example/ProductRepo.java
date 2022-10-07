@@ -17,7 +17,7 @@ public class ProductRepo {
         return productsStorage;
     }
 
-    // Method
+    // Method: get one Product
     public Product getOneProduct(int index){
        return productsStorage.get(index);
     }

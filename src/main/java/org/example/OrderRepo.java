@@ -17,10 +17,12 @@ public class OrderRepo {
             return OrderList;
         }
 
-        // Method
+        // Method get one Order
         public Order getOneOrder(int index){
             return OrderList.get(index);
         }
+
+        // Method: add Order
         public void addOrder(Order newOrder){
              OrderList.add(newOrder);
         }
